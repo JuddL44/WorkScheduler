@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using WorkScheduler.Api.Data;
 
 namespace WorkScheduler.Api
 {
@@ -6,11 +8,14 @@ namespace WorkScheduler.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            builder.Configuration.AddUserSecrets<Program>();
             // Add services to the container.
+            var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<AppDbContext>(o => o.UseSqlServer(conn));
+
+
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
