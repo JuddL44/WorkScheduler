@@ -1,14 +1,12 @@
-﻿public class User
+﻿public class UserCreateDTO
 {
-    public int Id { get; set; }
     public string Username { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
-    public DateTime AccountCreationDate { get; } = DateTime.UtcNow;
     public Role Role { get; set; }
 
 
-    public User(string username, string email, string passwordhash, Role role)
+    public UserCreateDTO(string username, string email, string passwordhash, Role role)
     {
         Username = username;
         Email = email;

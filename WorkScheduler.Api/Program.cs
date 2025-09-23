@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WorkScheduler.Api.Data;
+using WorkScheduler.Api.Repo;
 
 namespace WorkScheduler.Api
 {
@@ -18,6 +19,8 @@ namespace WorkScheduler.Api
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IWorkRepository, WorkRepository>();
+            builder.Services.AddAutoMapper(typeof(Program));
 
             var app = builder.Build();
 
