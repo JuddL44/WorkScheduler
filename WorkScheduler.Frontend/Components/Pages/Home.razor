@@ -1,0 +1,60 @@
+﻿@page "/shifts"
+@using System.Linq;
+@rendermode InteractiveServer
+@inject NavigationManager Nav
+
+
+<style> body { background-color: #d8e2dc; align-content: center; align-items: center; } </style>
+
+<div class="line-backdrop-art-1"></div>
+<div class="line-backdrop-art-2"></div>
+<div class="line-backdrop-art-3"></div>
+
+
+<div class="shift-slot-container">
+	@for (int i = 0; i < shiftsToGenerate; i++)
+	{
+		var index = i;
+		<div class="shift-slot@(shiftStates[index])" @onclick="() => ChangeShiftState(index)">
+			<div class="shift-title">Janitorial</div>
+			<div class="shift-time-container">
+				<div class="shift-time-start">August 9th 5:00PM</div>
+				<div class="shift-time-end">August 10th 1:00AM</div>
+			</div>
+			@if (shiftStates[index] == "-extras")
+			{
+				<div class="shift-time-container">
+					<button class="shift-functions" @onclick="() => ReleaseShift(index)">Release shift</button>
+				</div>
+			}
+		</div>
+	}
+</div>
+
+
+
+@code
+{
+	int shiftsToGenerate = 30;
+	List<string> shiftStates = Enumerable.Repeat("", 30).ToList();
+
+
+
+	public void ReleaseShift(int shiftId) => Nav.NavigateTo($"/shifts/release/{shiftId}");
+
+
+
+
+
+	public void ChangeShiftState(int shiftId)
+	{
+		shiftStates[shiftId] = shiftStates[shiftId] == "" ? "-extras" : "";
+		StateHasChanged();
+
+	}
+
+
+
+
+}
+

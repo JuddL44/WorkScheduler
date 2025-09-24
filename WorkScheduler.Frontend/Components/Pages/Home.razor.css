@@ -1,0 +1,173 @@
+﻿
+
+
+/* Shifts grouped */
+.shift-slot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.shift-slot {
+    width: 60vw;
+    background: blue;
+    height: 10vw;
+    margin-bottom: 2vw;
+    border-radius: 15px;
+    border: 0.5vh solid #891C2A;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 4vw;
+    padding: 2vw;
+    transition: all 0.5s ease;
+}
+
+.shift-slot-extras {
+    width: 70vw !important;
+    background: blue;
+    height: 10vw;
+    margin-bottom: 2vw;
+    border-radius: 15px;
+    border: 0.5vh solid #891C2A;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 4vw;
+    padding: 2vw;
+    transition: all 0.5s ease;
+}
+
+.shift-title {
+    width: 32vw;
+    background: blue;
+    height: 5.4vw;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-family: 'Roboto Slab', serif;
+}
+
+.shift-slot:hover {
+    width: 61vw;
+    height: 11vw;
+    font-size: 4vw;
+}
+
+.shift-time-container {
+    width: 24vw;
+    background: blue;
+    height: 7vw;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    margin-left: 1vw;
+    gap: 0.2vw;
+}
+
+.shift-time-start {
+    width: 16vw;
+    background: blue;
+    height: 3vw;
+    border-radius: 15px;
+    background-color: rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    margin-top: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.shift-time-end {
+    width: 16vw;
+    background: blue;
+    height: 3vw;
+    border-radius: 15px;
+    background-color: rgba(255, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    margin-top: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.shift-functions {
+    width: 18vw;
+    background: blue;
+    height: 2.4vw;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    margin-top: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+    .shift-functions:hover {
+        width: 17vw;
+        font-size: 1.5vw;
+    }
+
+
+
+/* Art backgrounds */
+.line-backdrop-art-1 {
+    position: fixed;
+    width: 10vw;
+    height: 100vw;
+    top: 3.6vw;
+    background: #d52941;
+    right: 30vw;
+}
+
+.line-backdrop-art-2 {
+    position: fixed;
+    width: 10vw;
+    height: 100vw;
+    top: 3.6vw;
+    background: #990d35;
+    right: 20vw;
+}
+
+.line-backdrop-art-3 {
+    position: fixed;
+    width: 10vw;
+    height: 100vw;
+    top: 3.6vw;
+    background: #161925;
+    right: 10vw;
+}
